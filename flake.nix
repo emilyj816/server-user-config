@@ -20,14 +20,15 @@
           stateVersion = "21.11"; # typically you don't change this
 
           # change these yourself
-          homeDirectory = "/home/syp";
-          username = "syp";
+          homeDirectory = "/home/ejiang";
+          username = "ejiang";
 
           configuration = { pkgs, lib, ... }: {
             nixpkgs.overlays = [ overlay ];
 
             home.packages = with pkgs; [
               pkgs.home-manager
+              emacs              
 
               # basic utilities
               bottom # bottom is top
